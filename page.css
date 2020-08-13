@@ -1,5 +1,5 @@
 body {
-    background-image: url('./images/speed.jpg');
+    background-image: url('./images/road.jpg');
 }
 
 .row  {
@@ -7,4 +7,14 @@ body {
     color: white
 }
 
+a {
+    text-decoration: none;
+    color:white
+}
+
+a:hover
+  {
+    text-decoration:none;
+    cursor:pointer;
+   }
 

@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href='page.css'
+    <link rel="stylesheet" href="node_modules\font-awesome\css\font-awesome.min.css">
+    
+    <link rel="stylesheet" href='page.css'>
     <title>Landing page</title>
 </head>
 <!-- idea: using lyfestyle image as backgound for the page -->
@@ -14,9 +16,56 @@
             <h1 class='mx-2 my-2'>BMW Minnetonka</h1>
         </div>
         <div class = 'col-md-6'>
-            <p class='mx-left my-2'>BMW Minnetonka</p>
+            <ul style="list-style: none">
+                <li><a href='https://www.google.com/maps/place/BMW+of+Minnetonka/@44.9723094,-93.4793354,15z/data=!4m5!3m4!1s0x0:0xacc7c97153ea417!8m2!3d44.9723094!4d-93.4793354'><i class="fa fa-map-marker" aria-hidden="true"></i> 5802 Wayzata Blvd, Wayzata, MN 55391</a></li>
+                <li>(952) 243-2453</li>                 
+            </ul>
+            
         </div>
         
+    </div>
+    <div class = 'row' width=100>
+        <div id="carouselExampleControls" class="carousel slide"  data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" >
+                <!-- the video tag will be used -->
+                <!-- <video controls="controls" width ='1140'>
+                    <source src="" >
+                </video>
+                     -->
+                <iframe width ='1140'height ='641' src="https://www.youtube.com/embed/LqUoLkQ2ym0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+              </div>
+              <div class="carousel-item" >
+                <!-- <video controls="controls" width ='1140'>
+                    <source src="" >
+                </video>
+                     -->
+                <iframe width ='1140'height ='641' src="https://www.youtube.com/embed/9X_uPjJW9mY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                
+              </div>
+              <div class="carousel-item" >
+                <!-- <video controls="controls" width ='1140'>
+                    <source src="" >
+                </video>
+                     -->
+                <iframe width ='1140'height ='641' src="https://www.youtube.com/embed/2_rDqzjaPY0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                
+                
+              </div>
+              
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
     </div>
 </div>
 
