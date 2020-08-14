@@ -18,3 +18,19 @@ a:hover
     cursor:pointer;
    }
 
+   @font-face {
+    font-family: BMWHelvetica-Bold;
+    src: url('fonts\\BMWHelvetica-Bold.otf');
+  }
+  
+  h1 {
+    font-family: BMWHelvetica-Bold;
+    font-size: x-large;
+    
+  }
+
+  li {
+    font-family: BMWHelvetica-Bold;
+    font-size: medium;
+    
+  }
