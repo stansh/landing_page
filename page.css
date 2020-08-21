@@ -38,5 +38,18 @@ a:hover
   button {
     font-family: BMWHelvetica-Bold;
     
-
  }
+
+ tbody {
+   color: white;
+   line-height: 70%;
+ }
+
+/*  footer {
+  text-align: center;
+ }
+ */
+ .container {
+   width: 1140px
+ }
+ 
