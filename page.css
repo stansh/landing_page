@@ -49,7 +49,19 @@ a:hover
   text-align: center;
  }
  */
- .container {
-   width: 1140px
+
+
+ .videoContent {
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
  }
- 
+
+ .videoContent iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}

@@ -5,30 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="node_modules\font-awesome\css\font-awesome.min.css">
+    <link rel='stylesheet' href = 'node_modules\animate.css\animate.css'>
     
     <link rel="stylesheet" href='page.css'>
-    import { FadeTransform } from 'react-animation-components';
+    
     <title>Landing page</title>
 </head>
 <!-- idea: using lyfestyle image as backgound for the page -->
-<div class = 'container'>
+<div class = 'container-md'>
     <div class = 'row pt-5 pb-5 mb-3'>
-        <div class = 'col-md-6'>
+        <div class = 'col-md-6 animate__animated animate__fadeInUp'>
              
             <h1><span><img src="images/logo.png" width="40" class = 'mr-4'></span>BMW Minnetonka</h1>
+           
         </div>
-        <div class = 'col-md-6 text-right'>
+        <div class = 'col-md-6 text-right col-md-6 animate__animated animate__fadeInUp'>
             <ul style="list-style: none" >
-                <li><a href='https://www.google.com/maps/place/BMW+of+Minnetonka/@44.9723094,-93.4793354,15z/data=!4m5!3m4!1s0x0:0xacc7c97153ea417!8m2!3d44.9723094!4d-93.4793354'><i class="fa fa-map-marker" aria-hidden="true"></i><small>5802 Wayzata Blvd, Wayzata, MN 55391</small> </a></li>
+                <li ><a href='https://www.google.com/maps/place/BMW+of+Minnetonka/@44.9723094,-93.4793354,15z/data=!4m5!3m4!1s0x0:0xacc7c97153ea417!8m2!3d44.9723094!4d-93.4793354'><i class="fa fa-map-marker" aria-hidden="true"></i><small>5802 Wayzata Blvd, Wayzata, MN 55391</small> </a></li>
                 <li><samll>(952) 243-2453</samll></li>                 
             </ul>
             
         </div>
         
     </div>
-    <div class = 'row ' width = 100>
+    <div class = 'row' >
+   
       
-        <div id="carouselExampleControls" class="carousel slide "  data-ride="carousel">
+        <div id="carouselExampleControls" class="carousel slide"  data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active" >
                 <!-- the video tag will be used -->
@@ -69,11 +72,11 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
-
     </div>
+ 
   
   </div>
-  <div class = 'row mt-2'>
+  <div class = 'row mt-2 '>
     <div class = 'col-3'>
       <ul style="list-style: none"  class="ml-2 mt-3 ">
         
@@ -135,12 +138,12 @@
   </div>
 </div>
 
-<footer class = 'site-footer'>
+<!-- <footer class = 'site-footer'>
   <div class = 'container'>
     <div class = 'row'>
       <p class = 'mx-auto small '>Made by stansh.</p>
     </div>
-  </div>
+  </div> -->
  
 </footer>
 
