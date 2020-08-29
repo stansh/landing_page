@@ -12,89 +12,94 @@
     <title>Landing page</title>
 </head>
 <!-- idea: using lyfestyle image as backgound for the page -->
-<div class = 'container'>
-    <div class = 'row pt-5 pb-5 mb-3'>
-        <div class = 'col-md-6 animate__animated animate__fadeInUp'>
+<div class = 'container-fluid'>
+    <div class = 'row pt-5 pb-5 mb-3 '>
+        <div class = 'col-md-6  animate__animated animate__fadeInUp'>
              
             <h1><span><img src="images/logo.png" width="40" class = 'mr-4'></span>BMW Minnetonka</h1>
            
         </div>
-        <div class = 'col-md-6 text-right col-md-6 animate__animated animate__fadeInUp'>
+        <div class = 'col-md-6 text-right animate__animated animate__fadeInUp'>
             <ul style="list-style: none" >
                 <li ><a href='https://www.google.com/maps/place/BMW+of+Minnetonka/@44.9723094,-93.4793354,15z/data=!4m5!3m4!1s0x0:0xacc7c97153ea417!8m2!3d44.9723094!4d-93.4793354'><i class="fa fa-map-marker" aria-hidden="true"></i><small>5802 Wayzata Blvd, Wayzata, MN 55391</small> </a></li>
-                <li><samll>(952) 243-2453</samll></li>                 
+                <li><small>(952) 243-2453</small></li>                 
             </ul>
             
         </div>
         
     </div>
-    <div class = 'row' >
+    <div class = 'row' id="secondRow" >
+      
      
     
-        <div id="carouselExampleControls" class="carousel slide embed-responsive embed-responsive-16by9"  data-ride="carousel">
+        <div id="carouselControls" class="col-md-8 carousel slide embed-responsive embed-responsive-16by9"  data-ride="carousel">
               <div class="carousel-inner embed-responsive-item" >
                 <div class="carousel-item active embed-responsive-item ">
                 <!-- the video tag will be used -->
-                <!-- <video controls="controls" width ='1140'>
-                    <source src="" >
+                <video controls="controls" width ='1140'>
+                    <source src="videos/X7.mp4" >
                 </video>
-                     -->
-                  
-                <iframe  src="https://www.youtube.com/embed/LqUoLkQ2ym0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              
-              </div>
-              <div class="carousel-item embed-responsive-item " >
-                <!-- <video controls="controls" width ='1140'>
-                    <source src="" >
-                </video>
-                     -->
                     
-                <iframe  src="https://www.youtube.com/embed/9X_uPjJW9mY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  
+                <!-- <iframe  src="videos/aX3.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+              
+              </div>
+              <div class="carousel-item embed-responsive-item " >
+                <video controls="controls" width ='1140'>
+                    <source src="videos/X3.mp4" >
+                </video>
+                    
+                    
+               <!--  <iframe  src="videos/X3.mp4" frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
               
                 
               </div>
               <div class="carousel-item embed-responsive-item " >
-                <!-- <video controls="controls" width ='1140'>
-                    <source src="" >
+                <video controls="controls" width ='1140'>
+                    <source src="videos/3series.mp4" >
                 </video>
-                     -->
+                    
                    
-                <iframe  src="https://www.youtube.com/embed/2_rDqzjaPY0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- <iframe  src="videos/a3series.mp4" frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
-            
-                
               </div>
-              
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="carousel-control" aria-hidden="true"><i class="fa fa-arrow-circle-left fa-lg" aria-hidden="true"></i></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="carousel-control" aria-hidden="true"><i class="fa fa-arrow-circle-right fa-lg" aria-hidden="true"></i></span>
-              <span class="sr-only">Next</span>
-            </a>
           </div>
+         
+          </div>
+      
+        <div class = 'col-md-4 my-auto'>
+          <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev" onclick='changeOffer()'>
+            <span class="carousel-control" aria-hidden="true"><i class="fa fa-arrow-circle-left fa-lg" aria-hidden="true" ></i></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+            <span class="carousel-control" aria-hidden="true"><i class="fa fa-arrow-circle-right fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Next</span>
+          </a>
+          <ul style="list-style: none"  class="ml-5 animate__animated animate__bounceIn" id='offer'>
+            
+            <li style = 'font-size:2vw' class = 'mb-5'>2020 BMW X7</li>
+            <li style = 'font-size:1vw'>Lease for</li>
+            <li style = 'font-size:10vw'><span id='dollar'>$</span>479</li>
+            <li style = 'font-size:2vw' >for 36 mos</li>
+            <li style = 'font-size:2vw'>$0 Due at Signing</li>
+            <li style = 'font-size:2vw'class = 'mt-5' ><a type="button" class="btn btn-outline-dark" href='https://www.bmwofminnetonka.com/new-vehicles/x3/'>View Inventory</a></li>
+
+          </ul>
+          
         </div>
+      
   
  
   
   </div>
-  <div class = 'row mt-2 '>
-    <div class = 'col-md-3'>
-      <ul style="list-style: none"  class="ml-2 mt-3 ">
-        
-        <li style = 'font-size:1rem'>Lease for</li>
-        <li style = 'font-size:5rem' class = 'pt-1'><sup>$</sup>479</li>
-        <li>for 36 mos</li>
-        <li>$0 Due at Signing</li>
-      </ul>
+  <div class = 'row mt-2'>
+    
+    <div class = "col my-3">
+      
+      <button type="button" class="btn btn-outline-light float-md-right">Contact Us</button>
     </div>
-    <div class = "col-md-auto my-auto mx-5">
-      <h2>2020 BMW X5</h2>
-      <button type="button" class="btn btn-outline-light">View Inventory</button>
-      <button type="button" class="btn btn-outline-light">Contact Us</button>
-    </div>
-    <div class = 'col-md-3 mt-3 mx-auto '>
+    <div class = 'col-md-2 mt-3 '>
       <table class="table table-sm table-borderless">
         <thead>
           <tr>
@@ -156,6 +161,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src = 'script.js'></script>
 <body>
     
 </body>

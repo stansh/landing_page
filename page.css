@@ -1,5 +1,6 @@
 body {
-    background-image: url('./images/road.jpg');
+    /* background-image: url('./images/road.jpg'); */
+    background-color: white;
     background-attachment: fixed;
    
 }
@@ -31,13 +32,13 @@ a:hover
     
   }
 
-  li {
+li {
     font-family: BMWHelvetica-Bold;
-    font-size: medium;
+   
     
   }
 
-  button {
+button {
     font-family: BMWHelvetica-Bold;
     
  }
@@ -47,9 +48,26 @@ a:hover
    line-height: 70%;
  }
 
-/*  footer {
-  text-align: center;
+#secondRow {
+   background-color: white;
+   
  }
- */
 
+ #offer {
+  color:black;
+  line-height:1;
+  
+
+ }
+
+ #dollar{
+  font-size:5vw;
+  vertical-align: super;
+ }
+
+ .fa-arrow-circle-left, .fa-arrow-circle-right{
+  font-size:2vw;
+  color:#0166B1
+ }
+ 
 
