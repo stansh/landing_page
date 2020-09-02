@@ -1,6 +1,7 @@
+
 let index = 0;
 
-const offersText = [
+const offersData = [
     {
         id:0,
         model: '2021 BMW X7',
@@ -33,10 +34,18 @@ const offersText = [
     }
 ]
 
+window.onload = function getVideoLinks() {
+    const videoSlides = Array.from(document.querySelectorAll('video source')); 
+    for (let i = 0; i < offersData.length; i++) {
+    /* videoSlides[i].src = offersData[i].videoSrc; */
+    videoSlides[i].setAttribute('src', offersData[i].videoSrc);
+    }
+ }
 
 
-/* const slide = document.querySelector('.carousel-indicators>li>.active');
-console.log(index) */
+
+
+/* = offersData[i].videoSrc); */
 
 
 
@@ -46,16 +55,14 @@ function Next (prop) {
     index === 3 ? index = 0 : index;
     const offer = Array.from(document.querySelectorAll('#offer li'));
     let buttonLink = document.querySelector('#offer a');
-    let video = document.querySelector('video source');
-    
-    offer[0].innerHTML = offersText[index].model;
-    offer[1].innerHTML = offersText[index].type;
-    offer[2].innerHTML = `<span id='dollar'>$</span>`+ offersText[index].dollarAmount;
-    offer[3].innerHTML = offersText[index].length;
-    offer[4].innerHTML = offersText[index].das;
-    buttonLink.href = offersText[index].inventoryLink;  
-    video.src = offersText[index].videoSrc;
-
+    let video = document.querySelector('video source').getAttribute('src');
+    offer[0].innerHTML = offersData [index].model;
+    offer[1].innerHTML = offersData [index].type;
+    offer[2].innerHTML = `<span id='dollar'>$</span>`+ offersData [index].dollarAmount;
+    offer[3].innerHTML = offersData [index].length;
+    offer[4].innerHTML = offersData [index].das;
+    buttonLink.href = offersData [index].inventoryLink;  
+    video.src = offersData [index].videoSrc;
 }
 
  
