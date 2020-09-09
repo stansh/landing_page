@@ -1,5 +1,5 @@
 
-let index = 0;
+let offerIndex = 0;
 
 const offersData = [
     {
@@ -34,44 +34,62 @@ const offersData = [
     }
 ]
 window.onload = function getVideoLinks() {
-    const videoSlides = Array.from(document.querySelectorAll('video ')); 
+    const videoSlides = Array.from(document.querySelectorAll('video')); 
     for (let i = 0; i < offersData.length; i++) {
-    videoSlides[i].setAttribute('src', offersData[i].videoSrc);
-    }
+        videoSlides[i].setAttribute('src', offersData[i].videoSrc);
+        videoSlides[i].setAttribute('id', offersData[i].id);
+    }   
+    /* videoSlides[0].autoplay = true; */
  }
 
 
 
-function Next (prop) {
-    index = index + 1;
-    index === offersData.length ? index = 0 : index;
+
+
+
+
+
+
+function Next (props) {
+    
+    
+    offerIndex = offerIndex + 1;
+    offerIndex === offersData.length ? offerIndex = 0 : offerIndex;
+    const videos = Array.from(document.querySelectorAll('video')); 
+    videos[offerIndex].autoplay = true
+    /* if (videos[offerIndex].getAttribute('id') === [offerIndex]) {
+        videos[offerIndex].autoplay = true;
+    }  */
     const offer = Array.from(document.querySelectorAll('#offer li'));
     let buttonLink = document.querySelector('#offer a');
-    offer[0].innerHTML = offersData [index].model;
-    offer[1].innerHTML = offersData [index].type;
-    offer[2].innerHTML = `<span id='dollar'>$</span>`+ offersData [index].dollarAmount;
-    offer[3].innerHTML = offersData [index].length;
-    offer[4].innerHTML = offersData [index].das;
-    buttonLink.href = offersData [index].inventoryLink; 
+    offer[0].innerHTML = offersData [offerIndex].model;
+    offer[1].innerHTML = offersData [offerIndex].type;
+    offer[2].innerHTML = `<span id='dollar'>$</span>`+ offersData [offerIndex].dollarAmount;
+    offer[3].innerHTML = offersData [offerIndex].length;
+    offer[4].innerHTML = offersData [offerIndex].das;
+    buttonLink.href = offersData [offerIndex].inventoryLink; 
+   
     
 }
 
-function Prev (prop) {
-    console.log(index)
-    
-    index === 0 ? index = 2 : '';
-    console.log(index)
-    
- 
-
+function Prev (props) {
+    switch (offerIndex) {
+         case 0 : offerIndex = offersData.length - 1;
+         break;
+         case offersData.length - 1 : offerIndex = offersData.length - 2;
+         break;
+         case offersData.length - 2 : offerIndex = offersData.length - 3;
+         break;
+     }
+     
     const offer = Array.from(document.querySelectorAll('#offer li'));
     let buttonLink = document.querySelector('#offer a');
-    offer[0].innerHTML = offersData [index].model;
-    offer[1].innerHTML = offersData [index].type;
-    offer[2].innerHTML = `<span id='dollar'>$</span>`+ offersData [index].dollarAmount;
-    offer[3].innerHTML = offersData [index].length;
-    offer[4].innerHTML = offersData [index].das;
-    buttonLink.href = offersData [index].inventoryLink; 
+    offer[0].innerHTML = offersData [offerIndex].model;
+    offer[1].innerHTML = offersData [offerIndex].type;
+    offer[2].innerHTML = `<span id='dollar'>$</span>`+ offersData [offerIndex].dollarAmount;
+    offer[3].innerHTML = offersData [offerIndex].length;
+    offer[4].innerHTML = offersData [offerIndex].das;
+    buttonLink.href = offersData [offerIndex].inventoryLink; 
     
 }
 
@@ -82,42 +100,10 @@ function Prev (prop) {
 
 
 
-/* 'DOMTokenList' */
 
 
-
-
-
-
-/* .getAttribute('data-slide-to'); */
-
- 
-
-
-/* const offer = Array.from(document.querySelectorAll('#offer li'));
-
-console.log(offer.innerHTML) */
-
-/* const offer = Array.from(document.querySelectorAll('#offer li'));
-    
-console.log(offer[0].innerHTML)
-console.log(offer[1].innerHTML)
-console.log(offer[2].innerHTML)
-console.log(offer[3].innerHTML)
-console.log(offer[4].innerHTML)
-console.log(offer[5].innerHTML) */
 
    
 
 
 
-/* function changeOffer() {
-
-
-    const offer = Array.from(document.querySelectorAll('#offer li'));
-    
-    console.log(offer[2].innerHTML)
-   
-  
-   
-} */
