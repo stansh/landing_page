@@ -39,8 +39,8 @@ window.onload = function getVideoLinks() {
         videoSlides[i].setAttribute('src', offersData[i].videoSrc);
         videoSlides[i].setAttribute('id', offersData[i].id);
     }   
-    /* videoSlides[0].autoplay = true; */
- }
+    videoSlides[0].autoplay = true;
+ } 
 
 
 
@@ -55,11 +55,6 @@ function Next (props) {
     
     offerIndex = offerIndex + 1;
     offerIndex === offersData.length ? offerIndex = 0 : offerIndex;
-    const videos = Array.from(document.querySelectorAll('video')); 
-    videos[offerIndex].autoplay = true
-    /* if (videos[offerIndex].getAttribute('id') === [offerIndex]) {
-        videos[offerIndex].autoplay = true;
-    }  */
     const offer = Array.from(document.querySelectorAll('#offer li'));
     let buttonLink = document.querySelector('#offer a');
     offer[0].innerHTML = offersData [offerIndex].model;
@@ -68,8 +63,9 @@ function Next (props) {
     offer[3].innerHTML = offersData [offerIndex].length;
     offer[4].innerHTML = offersData [offerIndex].das;
     buttonLink.href = offersData [offerIndex].inventoryLink; 
-   
-    
+    const videos = Array.from(document.querySelectorAll('video'));
+    videos.forEach(video => video.pause())  
+    videos[offerIndex].play();   
 }
 
 function Prev (props) {
@@ -90,6 +86,9 @@ function Prev (props) {
     offer[3].innerHTML = offersData [offerIndex].length;
     offer[4].innerHTML = offersData [offerIndex].das;
     buttonLink.href = offersData [offerIndex].inventoryLink; 
+    const videos = Array.from(document.querySelectorAll('video'));
+    videos.forEach(video => video.pause())  
+    videos[offerIndex].play();  
     
 }
 
