@@ -56,6 +56,7 @@ button {
  #offer {
   color:black;
   line-height:1;
+  padding-left: 10rem;
   
 
  }
@@ -65,9 +66,15 @@ button {
   vertical-align: super;
  }
 
- .fa-arrow-circle-left, .fa-arrow-circle-right{
+
+ span .fa{
   font-size:2vw;
   color:#0166B1
+ }
+
+
+  .carousel-control-prev:hover, .carousel-control-next:hover {
+   background-color:#0166B1;
  }
  
 
