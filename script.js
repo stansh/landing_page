@@ -39,8 +39,8 @@ window.onload = function getVideoLinks() {
         videoSlides[i].setAttribute("src", offersData[i].videoSrc);
         videoSlides[i].setAttribute("id", offersData[i].id);
     }   
-    videoSlides[0].play();
- } 
+    videoSlides[0].autoplay = true;
+ }
 
 
 function Next (props) {  
