@@ -39,7 +39,7 @@ window.onload = function getVideoLinks() {
         videoSlides[i].setAttribute("src", offersData[i].videoSrc);
         videoSlides[i].setAttribute("id", offersData[i].id);
     }   
-    /* videoSlides[0].autoplay = true; */
+    videoSlides[0].play();
  } 
 
 
@@ -80,8 +80,7 @@ function Prev (props) {
     const videos = Array.from(document.querySelectorAll("video"));
     videos.forEach(video => video.pause())  
     videos[offerIndex].play();   
-
-    
+   
 }
 
  
