@@ -1,5 +1,7 @@
 body {
     background-color: white;
+    max-length: 100%;
+    overflow-x: hidden;
     
     
    
